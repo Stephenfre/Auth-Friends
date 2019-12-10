@@ -1,7 +1,14 @@
 import React from 'react'
 import { axiosWithAuth } from '../axiosWithAuth';
+import styled from "styled-components";
 import Friends from './Friends'
 import FriendsForm from './FriendsForm';
+
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+`
 
 
 class FriendsList extends React.Component {
@@ -58,7 +65,7 @@ class FriendsList extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <div>
           <FriendsForm
             postData={this.postData}
@@ -79,7 +86,7 @@ class FriendsList extends React.Component {
               ))
             )}
         </div>
-      </div>
+      </Container>
     )
   }
 }

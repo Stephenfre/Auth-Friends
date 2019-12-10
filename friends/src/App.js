@@ -9,18 +9,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ul>
-          <li>
-            <Link to='./login'>Login</Link>
-          </li>
-          <li>
-            <Link to='./friends'>Friends</Link>
-          </li>
-        </ul>
+        <div>
+          <Link to='./login'>Login</Link>
+          <Link to='./friends'>Friends</Link>
+        </div>
         <Switch>
-          <PrivateRoute exact path="/friends" component={FriendsList} />
+          <PrivateRoute path="/friends" component={FriendsList} />
           <Route path="/login" component={Login} />
-          <Route component={Login} />
+          {/* <Route component={Login} /> */}
         </Switch>
       </div>
     </Router>
